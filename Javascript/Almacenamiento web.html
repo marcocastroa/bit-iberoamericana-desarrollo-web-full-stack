@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script>
+    /*
+        SessionStorage:
+        - Por sesión
+        - Se pierde cuando se cierra la sesión/pestaña del navegador
+        Ejemplo de cuántas veces se ha hecho click en un botón en la sesión actual
+    */
+    function clickCounter(){
+        if (typeof(Storage) !== "undefined"){
+            if (sessionStorage.clickCounter){
+                sessionStorage.clickCounter = Number(sessionStorage.clickCounter) + 1;
+            }
+            else{
+                sessionStorage.clickCounter = 1;
+            }
+            document.getElementById("result").innerHTML = "Has clickeado el botón " + sessionStorage.clickCounter + " veces en esta sesión"
+        }
+        else{
+            document.getElementById("result").innerHTML = "Tu navegador no soporta Almacenamiento Web"
+        }
+    }
+    </script>
+  
+    <title>Almacenamiento Web</title>
+</head>
+<body>
+    <div id="result"></div>
+    <p>
+        <button onclick="clickCounter()" type="button">Click me</button>
+    </p>
+    <script>
+    /*
+        LocalStorage:
+        - Sin fecha de vencimiento
+        - No se eliminan cuando se cierre el navegador
+        - Disponibles en las fechas futuras
+    */
+    if (typeof(Storage) !== "undefined"){
+        localStorage.setItem("lastname", "Castro")
+        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        localStorage.removeItem("lastname"); // Borra un elemento específico
+        localStorage.clear(); // Borra todos los elementos
+    }else{
+        document.getElementById("result").innerHTML = "Lo siento, tú navegador no soporta almacenamiento web"
+    }
+    </script>
+</body>
+</html>

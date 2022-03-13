@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Clases</title>
+</head>
+<body>
+    <script>
+        class Carro{
+            constructor(color, velocidad, marcha){
+                this.color = color;
+                this.velocidad = velocidad;
+                this.marcha = marcha;
+            }
+            velocidad(){
+                return "Velocidad del carro: $(this.velocidad)"
+            }
+        }
+
+        const micarro = new Carro('Negro', 80, 2);
+        const tucarro = new Carro('Blanco', 180, 3);
+
+        console.log(micarro);
+        console.log(tucarro);
+    </script>
+</body>
+</html>

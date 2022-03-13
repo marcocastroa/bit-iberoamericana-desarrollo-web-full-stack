@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Arreglos</title>
+</head>
+<body>
+    <script>
+        /* Array simples */
+        {
+            let array = ['one', 'two', 'three'];
+            let array1 = array[0];
+            let array2 = array[1];
+            let array3 = array[2];
+        }
+
+        {
+            let array = [];
+            array[0] = 'Marco';
+            array[1] = 'Castro';
+            array[2] = 46;
+        }
+
+        {
+            let array = new Array();
+
+            array[0] = 'Marco';
+            array[1] = 'Castro';
+            array[2] = 46;
+        }
+
+        /* Array de objetos */
+        {
+            let equipo = [
+                {name: "Marco Castro", edad: 46},
+                {name: "Amalia Castro", edad: 6},
+                {name: "Bibiana Ocampo", edad: 40}
+            ]
+
+            equipo[0]['name'];
+            equipo[0]['edad'];
+
+            console.log(equipo[2]);
+
+            /* Existen métodos para gestionar elementos:
+            pop(): Eliminar el último elemento
+            push(): Agregar un elemento al final
+            shift(): Eliminar el primer elemento
+            unshift(): Agregar un elemento al comienzo
+            splice(): Agregar elementos en un lugar específico o para eliminar elementos
+            concat(): Unir dos arreglos
+            toString(): Convierte un arreglo en cadena
+            sort(): Ordena un arreglo
+            reverse(): Reversa de los arreglos
+            */
+        }
+    </script>
+</body>
+</html>
